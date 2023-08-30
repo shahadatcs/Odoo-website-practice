@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <template id="custom_snippets" name="Custom Snippets">
+            <section class="row align-items-center">
+                <div class="container">
+                    <h2>
+                        <center>
+                            <b>Menu</b>
+                            <br/>
+                        </center>
+                    </h2>
+                    <div class="row">
+                        <div class="alert alert-success">
+                            <img src="/theme_name/static/src/css/img/snippets/pic1.png" class="img img-responsive"
+                                 alt="Demo 1"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="alert alert-danger">
+                            <img src="/theme_name/static/src/css/img/snippets/pic2.png" class="img img-responsive"
+                                 alt="Demo 2"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
+        <template id="custom_snippets_web_snippets" inherit_id="website.snippets" name="Custom Snippets">
+            <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+                <t t-snippet="custom_snippets.custom_snippets"
+                   t-thumbnail="/theme_name/static/src/css/img/snippets/pic3.png"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

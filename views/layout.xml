@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="custom_message" inherit_id="website.layout" name="Custom Header">
+        <xpath expr="//div[@id='wrapwrap']/header" position="after">
+            <div class="container">
+                <div class="alert alert-info mt16" role="alert">
+                 <strong>Welcome</strong> is our website
+                </div>
+
+            </div>
+<!--            <t t-snippet="theme_name.test_snippet" t-thumbnail="/theme_name/static/src/img/test_thumbnail.png"/>-->
+        </xpath>
+    </template>
+</odoo>

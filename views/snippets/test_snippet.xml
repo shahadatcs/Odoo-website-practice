@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="test_snippet" name="Test Snippet">
+        <section class="container oe_structure">
+            <h1 class="test-heading">Test Snippet</h1>
+            <ul class="test">
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                 <img src="/theme_name/static/src/css/img/snippets/pic2.png" class="img img-responsive"  alt="Demo 2"/>
+                <li>Feature 3</li>
+            </ul>
+        </section>
+    </template>
+
+    <template id="test_snippet_register" inherit_id="website.snippets" name="Test Snippet Register">
+        <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
+
+            <t t-snippet="theme_name.test_snippet" t-thumbnail="/theme_name/static/src/img/test_thumbnail.png"/>
+        </xpath>
+    </template>
+</odoo>
+
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="about_us_page" model="website.page">
+            <field name="name">About us</field>
+            <field name="is_published" eval="True"/>
+            <field name="key">theme_name.page_about_us</field>
+            <field name="url">/about</field>
+            <field name="type">qweb</field>
+            <field name="arch" type="xml">
+                <t t-name="theme_name.about_us_page">
+                    <t t-call="website.layout">
+                        <div id="wrap" class="oe_structure">
+                            <div class="container">
+                                <h1>About Us</h1>
+                                <div class="about-section">
+                                    <h1>About Us Page</h1>
+                                    <p>Some text about who we are and what we do.</p>
+                                    <p>Resize the browser window to see that this page is responsive by the way.</p>
+                                </div>
+
+                                <h2 style="text-align:center">Our Team</h2>
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="card">
+                                            <img src="/theme_name/static/src/css/img/download.jpeg" alt="Description of the image"/>
+                                            <div class="container">
+                                                <h2>Jane Doe</h2>
+                                                <p class="title">CEO and Founder</p>
+                                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                                <p>jane@example.com</p>
+                                                <p>
+                                                    <button class="button">Contact</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <div class="card">
+                                            <img src="/theme_name/static/src/css/img/download.jpeg" alt="Description of the image"/>
+                                            <div class="container">
+                                                <h2>Mike Ross</h2>
+                                                <p class="title">Art Director</p>
+                                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                                <p>mike@example.com</p>
+                                                <p>
+                                                    <button class="button">Contact</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="column">
+                                        <div class="card">
+                                        <img src="/theme_name/static/src/css/img/download.jpeg" alt="Description of the image"/>
+                                            <div class="container">
+                                                <h2>John Doe</h2>
+                                                <p class="title">Designer</p>
+                                                <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                                                <p>john@example.com</p>
+                                                <p>
+                                                    <button class="button">Contact</button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </field>
+        </record>
+
+        <record id="about_page_link" model="website.menu">
+            <field name="name">About Us</field>
+            <field name="page_id" ref="about_us_page"/>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">98</field>
+        </record>
+    </data>
+</odoo>
